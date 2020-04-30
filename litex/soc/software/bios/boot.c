@@ -531,3 +531,10 @@ void spisdcardboot(void)
 #endif
 }
 #endif
+
+
+//Initialized to avoid having them set to zero by BSS clear
+volatile unsigned int smp_lottery_value; 
+volatile unsigned int smp_lottery_target; 
+volatile unsigned int smp_lottery_args[3]; 
+volatile unsigned int smp_lottery_lock;
